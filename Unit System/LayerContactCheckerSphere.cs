@@ -1,17 +1,19 @@
 using UnityEngine;
-
-public class LayerContactCheckerSphere : LayerContactChecker
+namespace LancyStudio.Platformer2D
 {
-    [SerializeField] private float radius = 1f;
-
-    public override bool IsContactedWithLayer()
+    public class LayerContactCheckerSphere : LayerContactChecker
     {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(Pos, radius, collisionLayer);
-        return colliders.Length > 0;
-    }
+        [SerializeField] private float radius = 1f;
 
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.DrawSphere(Pos, radius);
+        public override bool IsContactedWithLayer()
+        {
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(Pos, radius, collisionLayer);
+            return colliders.Length > 0;
+        }
+
+        private void OnDrawGizmosSelected()
+        {
+            Gizmos.DrawSphere(Pos, radius);
+        }
     }
 }

@@ -1,12 +1,15 @@
 using UnityEngine;
 
-public class Player : Unit
+namespace LancyStudio.Platformer2D
 {
-    void Update()
+    public class Player : Unit
     {
-        MoveDirection = new Vector2(
-            Input.GetAxisRaw("Horizontal"),
-            Input.GetAxisRaw("Vertical")
-        );
+        void Update()
+        {
+            MoveDirection = new Vector2(
+                Input.GetAxisRaw("Horizontal"),
+                Input.GetAxisRaw("Vertical")
+            );
+        }
     }
 }

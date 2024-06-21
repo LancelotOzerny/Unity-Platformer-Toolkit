@@ -1,6 +1,9 @@
 using UnityEngine;
 
-public class Unit : UnitMovement
+namespace LancyStudio.Platformer2D
 {
+    public class Unit : UnitMovement
+    {
 
+    }
 }
